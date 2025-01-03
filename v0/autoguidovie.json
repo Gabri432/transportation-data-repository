@@ -1,0 +1,35 @@
+{
+    "lines":[
+        {
+            "number":"97",
+            "cities":["Villanterio", "Valera Fratta", "Torrevecchia Pia", "Landriano", "Opera", "Milan"],
+            "website": "https://pavia.autoguidovie.it/it/orario-invernale-scolastico-extraurbano-24-25",
+            "time_tables":[
+                {
+                    "weekdays":[
+                        {
+                            "to_Milan_times":[""],
+                            "back_times":[""]
+                        }
+                    ]
+                },
+                {
+                    "saturdays":[
+                        {
+                            "to_Milan_times":[""],
+                            "back_times":[""]
+                        }
+                    ]
+                },
+                {
+                    "holidays":[
+                        {
+                            "to_Milan_times":[""],
+                            "back_times":[""]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
