@@ -1,6 +1,18 @@
 # Public Transportation Data Repository for Villanterio
 
-This repository contains structured and versioned data about public transportation in Villanterio. The goal is to provide utility information for citizen of the town and application development. 
+This repository contains structured and versioned data about public transportation in Villanterio. The goal is to provide utility information for citizens of the town and application development. 
+
+## Intended use
+
+1. The idea behind this project is to allow to search at what times there were buses to and from Villanterio.
+
+2. There are (currently) two bus lines, one that goes to Milan and back, the other that goes from Lodi to Pavia, and back.
+
+3. You can search at what times there is a bus from Pavia, from Lodi, or from Milan, that takes to Villanterio. Conversely, you can also seach at what times a bus from Villanterio goes to Pavia, Lodi or Milan.
+
+4. There are also extra details about the cities crossed, the number of the line, the website of the (two) companies. 
+
+5. This project may be still a valid starting point if you intended to use for your own city.
 
 ## Project Structure
 
@@ -72,7 +84,7 @@ The data in this repository adheres to a standardized schema to ensure consisten
 
 ## Contributing
 
-We welcome contributions to improve the quality and coverage of the data. Please refer to `CONTRIBUTING.md` for detailed guidelines.
+In `CONTRIBUTING.md` you will know how you can contribute to the project.
 
 ## License
 
@@ -80,6 +92,6 @@ This repository is licensed under the MIT. See `LICENSE` for more details.
 
 ## Notes
 
-When considering line 97, I have only considered buses from/to Milan, and back to Villanterio. Therefore those buses that goes to Inverno or Pieve Porto Morone. If you need more information check [Autoguidovie's website](https://pavia.autoguidovie.it/it/orario-invernale-scolastico-extraurbano-24-25).
+1. When considering line 97, I have only considered buses from Villanterio to Milan, and back. Therefore I have ignored those buses that goes to Inverno or Pieve Porto Morone. If you need more information check [Autoguidovie's website](https://pavia.autoguidovie.it/it/orario-invernale-scolastico-extraurbano-24-25).
 
-
+2. This project is intended for learning porpuses, and utility, not for profit.
