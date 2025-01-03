@@ -1,6 +1,6 @@
 # Public Transportation Data Repository for Villanterio
 
-This repository contains structured and versioned data about public transportation in Villanterio. The goal is to provide a reliable and well-documented resource for researchers, developers, and policymakers interested in transportation analysis and application development. 
+This repository contains structured and versioned data about public transportation in Villanterio. The goal is to provide utility information for citizen of the town and application development. 
 
 ## Project Structure
 
@@ -15,13 +15,13 @@ root
 
 -- v0/                 # Unstable data, subject to breaking changes
 ---- autoguidovie.json   # Transportation data for Company 1
----- star.json   # Transportation data for Company 2
+---- star.json         # Transportation data for Company 2
 
 -- v1/                 # First stable version of the data
 ---- company1.json
 ---- company2.json
 
--- v2/                 # Second stable version of the data
+-- v2/                 # Second stable version of the data (not currently existing, just to give you the idea)
 ---- company1.json
 ---- company2.json
 
