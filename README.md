@@ -26,19 +26,22 @@ root
 -- .gitignore          # Specifies files and folders to exclude from version control
 
 -- v0/                 # Unstable data, subject to breaking changes
----- autoguidovie.json   # Transportation data for Company 1
+---- autoguidovie.json # Transportation data for Company 1
 ---- star.json         # Transportation data for Company 2
+---- scripts/
+------ filter.py       # Utility scripts for managing and validating data
 
 -- v1/                 # First stable version of the data
 ---- company1.json
 ---- company2.json
+---- scripts/
+------ filter.py
 
 -- v2/                 # Second stable version of the data (not currently existing, just to give you the idea)
 ---- company1.json
 ---- company2.json
-
--- scripts/              # Utility scripts for managing and validating data
----- filter.py
+---- scripts/
+------ filter.py
 ```
 
 ### File Structure
