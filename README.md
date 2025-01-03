@@ -38,8 +38,7 @@ root
 ---- company2.json
 
 -- scripts/              # Utility scripts for managing and validating data
----- validate_schema.py
----- update_version.py
+---- filter.py
 ```
 
 ### File Structure
@@ -50,10 +49,6 @@ Each version folder (e.g., `v1`, `v2`) contains:
 ```json
 {}
 ```
-
-### Schema
-
-The data in this repository adheres to a standardized schema to ensure consistency and interoperability. You can find the schema definition in the `schema/` folder (if applicable).
 
 ## How to Use the Data
 
