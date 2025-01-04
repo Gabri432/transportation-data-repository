@@ -16,7 +16,9 @@ This repository contains structured and versioned data about public transportati
 
 ## Project Structure
 
-The repository is organized into multiple folders based on data versions. Each version represents a stable snapshot of the transportation data, with improvements and changes documented over time.
+The project is organized in folders, each representing a version of the entire project.
+
+Each folder contains its own set of json data and scripts.
 
 ```python
 root
@@ -51,12 +53,6 @@ root
 ------ Filter.py
 ------ [...]
 ```
-
-### File Structure
-
-Each version folder (e.g., `v1`, `v2`) contains:
-- JSON files: Structured data for individual transportation companies.
-- Consistent formatting and adherence to a predefined schema (if applicable).
 
 #### Json structure part 1
 ```json
