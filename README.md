@@ -29,19 +29,27 @@ root
 ---- autoguidovie.json # Transportation data for Company 1
 ---- star.json         # Transportation data for Company 2
 ---- scripts/
------- filter.py       # Utility scripts for managing and validating data
+------ Filter.py       # Utility class for filtering data
+------ Getters.py      # Utility class for getting data
+------ enums.py        # List of various Enums
+------ BusLine.py      # List of various classes used to represent data
+------ print_json.py   # Utility functions for printing data
+------ example.py      # Simple program using various utility functions/methods
+
 
 -- v1/                 # First stable version of the data
 ---- company1.json
 ---- company2.json
 ---- scripts/
------- filter.py
+------ Filter.py       # Each version will have its own set of scripts to ensure backward compatibility
+------ [...]
 
 -- v2/                 # Second stable version of the data (not currently existing, just to give you the idea)
 ---- company1.json
 ---- company2.json
 ---- scripts/
------- filter.py
+------ Filter.py
+------ [...]
 ```
 
 ### File Structure
@@ -49,8 +57,61 @@ root
 Each version folder (e.g., `v1`, `v2`) contains:
 - JSON files: Structured data for individual transportation companies.
 - Consistent formatting and adherence to a predefined schema (if applicable).
+
+#### Json structure part 1
 ```json
-{}
+{
+   "lines":[ // Set of lines (currently one per company)
+        {
+            "number":"97", // The number or name of the line
+            "cities":["Villanterio", "..."], // The list of cities crossed by this line
+            "website": "https://pavia.autoguidovie.it/it/orario-invernale-scolastico-extraurbano-24-25", // Link to the website
+            "fares": [ // List of fares
+                {
+                    "start":"Villanterio", // Starting city related to the fare 
+                    "destination":"Milan", // Destination city related to the fare
+                    "price":"4.80" // Cost of the travel between start and destination (in Euros)
+                    
+                }
+            ],
+            "time_table_types":[...] // List of Time Table (see next box)
+        }
+   ]
+}
+```
+#### Json structure part 2
+```json
+{
+   ...
+   "time_table_types":[
+                {
+                    "type": "regular", // Type of time table ("regular" or "special")
+                    "schedules": [     // List of schedules
+                        {
+                            "period":"weekdays", // Period ("weekdays", "saturdays" or "holidays")
+                            "routes":[
+                                {
+                                    "start":"Villanterio", // Starting city of the specific route
+                                    "destination":"Milan", // Destination city of the specific route
+                                    "times":["05:43", "..."] // List of bus times when they start from the starting city
+                                },
+                                {
+                                    "start":"Milan", // Starting city of the specific route
+                                    "destination":"Villanterio", // Destination city of the specific route
+                                    "times":["07:50", "..."] // List of bus times when they start from the starting city
+                                }
+                            ]
+                        },
+                        ... // Next schedules
+                    ]
+                },
+                {
+                    "type": "special",
+                    "schedules": []
+                },
+                ... // Next time table types
+            ]
+}
 ```
 
 ## How to Use the Data
