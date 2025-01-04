@@ -18,7 +18,7 @@ This repository contains structured and versioned data about public transportati
 
 The repository is organized into multiple folders based on data versions. Each version represents a stable snapshot of the transportation data, with improvements and changes documented over time.
 
-```
+```python
 root
 -- LICENSE             # Repository licensing information (MIT)
 -- README.md           # Overview and instructions for using the repository
@@ -133,12 +133,6 @@ Each version folder (e.g., `v1`, `v2`) contains:
    with open('v1/company1.json', 'r') as file:
        data = json.load(file)
        print(data)
-   ```
-
-4. **Validate Data (Optional)**
-   Run the provided validation script to ensure data integrity:
-   ```bash
-   python scripts/validate_schema.py
    ```
 
 ## Contributing
