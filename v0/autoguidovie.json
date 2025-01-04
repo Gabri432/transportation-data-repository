@@ -65,7 +65,7 @@
                 },
                 {
                     "type": "special",
-                    "schedule": []
+                    "schedules": []
                 }
             ]
         }

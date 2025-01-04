@@ -21,7 +21,7 @@
             "time_table_types":[
                 {
                     "type": "regular",
-                    "schedule": [
+                    "schedules": [
                         {
                             "period":"weekdays",
                             "routes":[
@@ -128,7 +128,7 @@
                 },
                 {
                     "type": "special",
-                    "schedule": []
+                    "schedules": []
                 }
             ]
         }
