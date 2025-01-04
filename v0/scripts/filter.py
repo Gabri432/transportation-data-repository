@@ -90,6 +90,3 @@ class Filter:
         """
         regular_schedules: list[Schedule] = [time_table for time_table in bus_line.time_table_types if time_table["type"] == "regular"][0]["schedules"]
         return [route for route in regular_schedules[0]["routes"] if route["start"] == city or route["destination"] == city]
-
-
-print(Filter.filter_route_times_by_time_after())
