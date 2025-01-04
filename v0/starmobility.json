@@ -6,8 +6,16 @@
             "website": "https://starmobility.it/star/pdf.php?line=S001",
             "fares": [
                 {
-                    "to_Pavia": "2.80",
-                    "to_Lodi": "2.80"
+                    "from":"Villanterio",
+                    "destination":"Pavia",
+                    "price":"2.80"
+                    
+                },
+                {
+                    "from":"Villanterio",
+                    "destination":"Lodi",
+                    "price":"2.80"
+                    
                 }
             ],
             "time_table_types":[
