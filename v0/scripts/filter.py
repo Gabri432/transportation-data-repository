@@ -1,4 +1,4 @@
-from BusLine import BusLine, Route
+from BusLine import BusLine, Route, Schedule
 from Getters import Getters
 
 class Filter:
@@ -25,12 +25,12 @@ class Filter:
         ### `period`: str
             either "holidays", "saturdays" or "weekdays" (default)
         """
-        regular_schedules = [time_table for time_table in bus_line.time_table_types if time_table.type == "regular"][0].schedules
-        specific_period_regular_schedules = [schedule for schedule in regular_schedules if schedule.period == period] 
-        return specific_period_regular_schedules[0].routes
+        regular_schedules: list[Schedule] = [time_table for time_table in bus_line.time_table_types if time_table["type"] == "regular"][0]["schedules"]
+        specific_period_regular_schedules = [schedule for schedule in regular_schedules if schedule["period"] == period] 
+        return specific_period_regular_schedules[0]["routes"]
     
     @staticmethod
-    def filter_route_times_by_time_after(bus_route: Route, time="15:30") -> list[str]:
+    def filter_route_times_by_time_after(bus_route=autoguidovie_bus_lines[0].time_table_types[0]["schedules"][0]["routes"][0], time="15:30") -> list[str]:
         """
         Returns a list of the existing (regular) bus times later than the one specified by the user. Each bus time represents the time 
         where the bus starts the route. That is, if the starting city is, let's say, Pavia, then all the bus times the function will return 
@@ -46,7 +46,7 @@ class Filter:
         ### `time`: str
             any string in format dd:dd, ideally between 05:00 and 21:00 (15:30 is default).
         """
-        return [bus_time for bus_time in bus_route.times if bus_time > time]
+        return [bus_time for bus_time in bus_route["times"] if bus_time > time]
     
     @staticmethod
     def filter_bus_line_by_time_after(bus_line=autoguidovie_bus_lines[0], time="15:30", period="weekdays") -> list[Route]:
@@ -56,8 +56,6 @@ class Filter:
 
         More specifically, returns a list of Route objects, each having a list of times in format dd:dd later than, the names of 
         the starting and destination cities per each route.
-
-        This method assumes that `Filter.autoguidovie_bus_lines_data()` was already invoked.
         
         Parameters
         ----------
@@ -68,10 +66,10 @@ class Filter:
             any string in format dd:dd, ideally between 05:00 and 21:00 (15:30 is default)
         """
         specific_period_routes = Filter.filter_bus_line_by_period(bus_line, period)
-        filtered_routes = list[Route]
+        filtered_routes: list[Route] = []
         for route in specific_period_routes:
             times = Filter.filter_route_times_by_time_after(route, time)
-            filtered_routes.append(Route(route.start, route.destination, times))
+            filtered_routes.append(Route(route["start"], route["destination"], times))
         return filtered_routes
     
     @staticmethod
@@ -90,5 +88,8 @@ class Filter:
         ### `city`: str
             either "Milan", "Lodi", or "Pavia" (default)
         """
-        regular_schedules = [time_table for time_table in bus_line.time_table_types if time_table.type == "regular"][0].schedules
-        return [route for route in regular_schedules[0].routes if route.start == city or route.destination == city]
+        regular_schedules: list[Schedule] = [time_table for time_table in bus_line.time_table_types if time_table["type"] == "regular"][0]["schedules"]
+        return [route for route in regular_schedules[0]["routes"] if route["start"] == city or route["destination"] == city]
+
+
+print(Filter.filter_route_times_by_time_after())

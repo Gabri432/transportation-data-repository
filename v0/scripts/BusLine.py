@@ -1,4 +1,4 @@
-class Route:
+class Route(object):
     def __init__(self, start: str, destination: str, times: list[str]):
         self.start = start
         self.destination = destination
@@ -12,7 +12,7 @@ class Route:
         return f"Route start: {self.start}\nRoute destination: {self.destination}\nRoute bus times: {self.times}\n\n"
 
 
-class Schedule:
+class Schedule(object):
     def __init__(self, period: str, routes: list[Route]):
         self.period = period
         self.routes = routes
