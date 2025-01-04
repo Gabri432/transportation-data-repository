@@ -24,7 +24,7 @@
                     "schedule": [
                         {
                             "period":"weekdays",
-                            "tables":[
+                            "routes":[
                                 {
                                     "start":"Villanterio",
                                     "destination":"Pavia",
@@ -64,7 +64,7 @@
                         },
                         {
                             "period":"saturdays",
-                            "tables":[
+                            "routes":[
                                 {
                                     "start":"Villanterio",
                                     "destination":"Pavia",
@@ -101,7 +101,7 @@
                         },
                         {
                             "period":"holidays",
-                            "tables":[
+                            "routes":[
                                 {
                                     "start":"Villanterio",
                                     "destination":"Pavia",

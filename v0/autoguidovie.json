@@ -18,7 +18,7 @@
                     "schedules": [
                         {
                             "period":"weekdays",
-                            "tables":[
+                            "routes":[
                                 {
                                     "start":"Villanterio",
                                     "destination":"Milan",
@@ -33,7 +33,7 @@
                         },
                         {
                             "period":"saturdays",
-                            "tables":[
+                            "routes":[
                                 {
                                     "start":"Villanterio",
                                     "destination":"Milan",
@@ -48,7 +48,7 @@
                         },
                         {
                             "period":"holidays",
-                            "tables":[
+                            "routes":[
                                 {
                                     "start":"Villanterio",
                                     "destination":"Milan",
