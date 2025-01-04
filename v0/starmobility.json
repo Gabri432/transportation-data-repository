@@ -20,7 +20,8 @@
             ],
             "time_table_types":[
                 {
-                    "regular": [
+                    "type": "regular",
+                    "schedule": [
                         {
                             "period":"weekdays",
                             "tables":[
@@ -123,8 +124,11 @@
                                 }
                             ]
                         }
-                    ],
-                    "special": []
+                    ]
+                },
+                {
+                    "type": "special",
+                    "schedule": []
                 }
             ]
         }
