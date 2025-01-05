@@ -132,6 +132,12 @@ root
    python v0/scripts/run.py
    ```
 
+4. **Just get the data**
+   If you just need the data you can access the rawgithubusercontent:
+   ```
+   https://raw.githubusercontent.com/Gabri432/transportation-data-villanterio/refs/heads/main/v0/autoguidovie.json
+   ```
+
 ## Contributing
 
 In `CONTRIBUTING.md` you will know how you can contribute to the project.
