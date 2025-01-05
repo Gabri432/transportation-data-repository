@@ -144,3 +144,5 @@ This repository is licensed under the MIT. See `LICENSE` for more details.
 1. When considering line 97, I have only considered buses from Villanterio to Milan, and back. Therefore I have ignored those buses that goes to Inverno or Pieve Porto Morone. If you need more information check [Autoguidovie's website](https://pavia.autoguidovie.it/it/orario-invernale-scolastico-extraurbano-24-25).
 
 2. This project is intended for learning porpuses, and utility, not for profit.
+
+3. Python version used: Python 3.12.4
