@@ -6,7 +6,7 @@ This repository contains structured and versioned data about public transportati
 
 1. Allowing a user to search for incoming and outgoing buses for a city.
 
-2. For example porpuses, I have used 2 bus lines and four (real name) cities.
+2. For example porpuses, I have used 2 transportation lines and four (real name) cities.
 
 3. You can search at what times there is a bus from Pavia, from Lodi, or from Milan, that takes to Villanterio. Conversely, you can also seach at what times a bus from Villanterio goes to Pavia, Lodi or Milan.
 
@@ -61,6 +61,7 @@ root
         {
             "line_code":"Bus Line Name or Code 0123", // The name or code of the line
             "cities":["Villanterio", "..."], // The list of cities crossed by this line
+            "vehicle":"bus", // Vehicle used for the line
             "website": "https://link_to_the_company_website", // Link to the website
             "fares": [ // List of fares
                 {

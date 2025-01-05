@@ -3,6 +3,7 @@
         {
             "line_code":"Bus line code n1 of company 1",
             "cities":["Villanterio", "City in the middle", "Milan"],
+            "vehicle":"tram",
             "website": "https://company_1_website_/",
             "fares": [
                 {

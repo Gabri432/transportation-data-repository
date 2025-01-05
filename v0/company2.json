@@ -3,6 +3,7 @@
         {
             "line_code":"Bus line code n1 of company 2",
             "cities":["Pavia", "City in the middle", "Lodi"],
+            "vehicle":"bus",
             "website": "https://company_2_website/",
             "fares": [
                 {

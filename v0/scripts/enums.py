@@ -11,3 +11,9 @@ class CityEnum(Enum):
     VILLANTERIO = "Villanterio"
     LODI = "Lodi"
     PAVIA = "Pavia"
+
+class VehicleEnum(Enum):
+    BUS = "bus"
+    TRAM = "tram"
+    TRAIN = "train"
+    AIRPLANE = "airplane"
