@@ -36,7 +36,7 @@ root
 ------ enums.py        # List of various Enums
 ------ BusLine.py      # List of various classes used to represent data
 ------ print_json.py   # Utility functions for printing data
------- example.py      # Simple program using various utility functions/methods
+------ help.py         # Simple program helping how to use each component
 
 
 -- v1/                 # First stable version of the data
