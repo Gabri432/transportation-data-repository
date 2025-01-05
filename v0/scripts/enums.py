@@ -17,3 +17,5 @@ class VehicleEnum(Enum):
     TRAM = "tram"
     TRAIN = "train"
     AIRPLANE = "airplane"
+    SHIP = "ship"
+    TAXI = "taxi"
