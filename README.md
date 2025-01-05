@@ -21,7 +21,7 @@ Each folder contains its own set of json data and scripts.
 ```python
 root
 -- start.py            # Script to explain more in detail the project
--- LICENSE             # Repository licensing information (MIT)
+-- LICENSE             # Repository licensing information (Apache License Version 2.0)
 -- README.md           # Overview and instructions for using the repository
 -- CONTRIBUTING.md     # Guidelines for contributing to the project
 -- .gitignore          # Specifies files and folders to exclude from version control
@@ -144,7 +144,7 @@ In `CONTRIBUTING.md` you will know how you can contribute to the project.
 
 ## License
 
-This repository is licensed under the MIT. See `LICENSE` for more details.
+This repository is licensed under the Apache License, Version 2.0. See `LICENSE` for more details.
 
 ## NOTES
 
