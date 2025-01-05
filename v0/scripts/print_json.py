@@ -14,7 +14,9 @@ def print_starmobility_data():
         starmobility_busLines = [BusLine(**busLine) for busLine in starmobility_data["lines"]]
         print(starmobility_busLines[0])
 
+print("AUTOGUIDOVIE ================= =================")
 print_autoguidovie_data()
-print("###########")
-print("###########")
+print("END =================")
+print("STARMOBILITY ================= =================")
 print_starmobility_data()
+print("END =================")

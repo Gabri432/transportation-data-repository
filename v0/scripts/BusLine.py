@@ -6,7 +6,7 @@ class Route(object):
 
     def __str__(self):
         strings = ", ".join(self.times)
-        return f"Route: {self.start} --> {self.destination}\nBus times departing from {self.start}: \t{strings}\n\n"
+        return f"\n--Route: {self.start} --> {self.destination}\n--Bus times departing from {self.start}: \t{strings}\n\n"
 
     def __repr__(self):
         return f"Route start: {self.start}\nRoute destination: {self.destination}\nRoute bus times: {self.times}\n\n"
@@ -19,7 +19,7 @@ class Schedule(object):
     
     def __str__(self):
         strings = "".join(str(Route(obj["start"], obj["destination"], obj["times"])) for obj in self.routes)
-        return f"Period: {self.period}\nRoutes: {strings}"
+        return f"-Period: {self.period}\nRoutes: {strings}\n"
 
     def __repr__(self):
         return f"Period: {self.period} \n Routes: {self.routes}\n"
@@ -32,7 +32,7 @@ class TimeTable:
     
     def __str__(self):
         strings = "".join(str(Schedule(obj["period"], obj["routes"])) for obj in self.schedules)
-        return f"Type: {self.type}\nSchedules: {strings}\n"
+        return f"-Type: {self.type}\n-Schedules: \n{strings}\n"
 
     def __repr__(self):
         return f"Table Type: {self.type}\n Table Schedule: {self.schedules}\n"
@@ -45,7 +45,7 @@ class Fare:
         self.price = price
 
     def __str__(self):
-        return f"Bus line: {self.start} --> {self.destination}\nPrice: {self.price}\n"
+        return f"--Bus line: {self.start} <--> {self.destination}\nPrice: {self.price}\n"
 
     def __repr__(self):
         return f"Start: {self.start}\nDestination: {self.destination}\nPrice: {self.price}\n"
@@ -64,8 +64,8 @@ class BusLine:
         string_fares = "".join(str(Fare(obj["start"], obj["destination"], obj["price"])) for obj in self.fares)
         string_cities = ", ".join(self.cities)
         return (
-            f"Line Code: {self.number}\n\nCities on the route: {string_cities}\n\n"
-            f"Website: {self.website}\n\nFares: {string_fares}\n\nRegular time table:\n{strings}\nSpecial time table: {self.time_table_types[1]}")
+            f"Bus Line Code: {self.number}\n\nCities on the route: {string_cities}\n\n"
+            f"Company Website: {self.website}\n\nBus Line Fares: \n{string_fares}\n\nBus timetable:\n{strings}\n")
 
     def __repr__(self):
         return (
