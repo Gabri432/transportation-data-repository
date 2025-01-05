@@ -1,18 +1,16 @@
 # Public Transportation Repository for Villanterio
 
-This repository contains structured and versioned data about public transportation in a city. The idea is to create a convinient template for applications with real transportation data.
+This repository contains structured and versioned data about public transportation in the town of Villanterio. The idea is to create a convenient structure/template for possible/futre applications with real transportation data.
 
 ## Expected Features
 
-1. Allowing a user to search for incoming and outgoing buses for a city.
+1. Allows a user to search for incoming and outgoing buses for a city. In this specific case, I have used 2 transportation lines and four (real name) cities.
 
-2. For example porpuses, I have used 2 transportation lines and four (real name) cities.
+2. You can search at what times there is a bus from Pavia, from Lodi, or from Milan, that takes to Villanterio. Conversely, you can also seach at what times a bus from Villanterio goes to Pavia, Lodi or Milan.
 
-3. You can search at what times there is a bus from Pavia, from Lodi, or from Milan, that takes to Villanterio. Conversely, you can also seach at what times a bus from Villanterio goes to Pavia, Lodi or Milan.
+3. There are also extra details about the cities crossed, the line name, the website of the companies. 
 
-4. There are also extra details about the cities crossed, the number of the line, the website of the (two) companies. 
-
-5. This project may be still a valid starting point if you intended to use for your own city.
+4. This project may be a good starting point if you intend to use it for your own city.
 
 ## Project Structure
 
@@ -22,6 +20,7 @@ Each folder contains its own set of json data and scripts.
 
 ```python
 root
+-- start.py            # Script to explain more in detail the project
 -- LICENSE             # Repository licensing information (MIT)
 -- README.md           # Overview and instructions for using the repository
 -- CONTRIBUTING.md     # Guidelines for contributing to the project
@@ -39,7 +38,7 @@ root
 ------ run.py          # Simple program to show an example of usage
 
 
--- v1/                 # First stable version of the data
+-- v1/                 # First stable version of the data (not currently existing, just to give you an idea)
 ---- company1.json
 ---- company2.json
 ---- scripts/
@@ -147,8 +146,23 @@ In `CONTRIBUTING.md` you will know how you can contribute to the project.
 
 This repository is licensed under the MIT. See `LICENSE` for more details.
 
-## Notes
+## NOTES
 
 1. This project is intended for learning porpuses, and utility, not for profit.
 
-2. Python version used: Python 3.12.4
+2. Python version used: 3.12.4
+
+3. The schedule data is sourced from publicly available PDFs provided by transportation companies. The data used in this project has been manually transcribed into JSON format. Below are the sources of the schedules:
+
+Autoguidovie: https://pavia.autoguidovie.it/it/orario-invernale-scolastico-extraurbano-24-25
+
+Star Mobility: https://starmobility.it/star/pdf.php?line=S001
+
+### Disclaimers
+
+1. Independence Disclaimer: This project is an independent initiative and is not affiliated with, sponsored by, or endorsed by any transportation company mentioned herein.
+
+2. Accuracy Disclaimer: The data provided in this project is for informational purposes only. Users are encouraged to verify the schedules directly with the official sources as linked in this document and the tool itself. This project is not liable for any discrepancies or inaccuracies in the data.
+
+3. Non-commercial Disclaimer: This project is strictly non-commercial and intended solely for public utility and personal learning purposes. No tickets are sold, and no revenue is generated from this project.
+
