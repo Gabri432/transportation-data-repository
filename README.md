@@ -36,7 +36,7 @@ root
 ------ enums.py        # List of various Enums
 ------ BusLine.py      # List of various classes used to represent data
 ------ print_json.py   # Utility functions for printing data
------- help.py         # Simple program helping how to use each component
+------ run.py          # Simple program to show an example of usage
 
 
 -- v1/                 # First stable version of the data
@@ -127,9 +127,9 @@ root
    python v0/scripts/print_json.py
    ```
 
-   To ask for help about how to use the code:
+   To run the program and getting the next bus times:
    ```
-   python v0/scripts/help.py
+   python v0/scripts/run.py
    ```
 
 ## Contributing
