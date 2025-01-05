@@ -1,7 +1,7 @@
 {
     "lines":[
         {
-            "number":"s001",
+            "line_code":"s001",
             "cities":["Pavia", "Vigalfo", "Copiano", "Villanterio", "Sant'Angelo Lodigiano", "Borgo S. Giovanni", "Pieve Fissiraga","Lodi"],
             "website": "https://starmobility.it/star/pdf.php?line=S001",
             "fares": [

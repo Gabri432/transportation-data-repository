@@ -59,7 +59,7 @@ root
 {
    "lines":[ // Set of lines (currently one per company)
         {
-            "number":"97", // The number or name of the line
+            "line_code":"97", // The name code of the line
             "cities":["Villanterio", "..."], // The list of cities crossed by this line
             "website": "https://pavia.autoguidovie.it/it/orario-invernale-scolastico-extraurbano-24-25", // Link to the website
             "fares": [ // List of fares

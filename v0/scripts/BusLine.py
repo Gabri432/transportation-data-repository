@@ -52,8 +52,8 @@ class Fare:
 
 
 class BusLine:
-    def __init__(self, number: str, cities: list[str], website: str, fares: list[Fare], time_table_types: list[TimeTable]):
-        self.number = number
+    def __init__(self, line_code: str, cities: list[str], website: str, fares: list[Fare], time_table_types: list[TimeTable]):
+        self.line_code = line_code
         self.cities = cities
         self.website = website
         self.fares = fares
@@ -64,10 +64,10 @@ class BusLine:
         string_fares = "".join(str(Fare(obj["start"], obj["destination"], obj["price"])) for obj in self.fares)
         string_cities = ", ".join(self.cities)
         return (
-            f"Bus Line Code: {self.number}\n\nCities on the route: {string_cities}\n\n"
+            f"Bus Line Code: {self.line_code}\n\nCities on the route: {string_cities}\n\n"
             f"Company Website: {self.website}\n\nBus Line Fares: \n{string_fares}\n\nBus timetable:\n{strings}\n")
 
     def __repr__(self):
         return (
-            f"Line number: {self.number}\nCities on the route: {self.cities}\n"
+            f"Line code: {self.line_code}\nCities on the route: {self.cities}\n"
             f"Website: {self.website}\nFares: {self.fares}\n Time Tables: {self.time_table_types[0]}\n")
