@@ -1,21 +1,21 @@
 {
     "lines":[
         {
-            "line_code":"Bus line code n1 of company 2",
+            "line_code":"Star Mobility line s001",
             "cities":["Pavia", "City in the middle", "Lodi"],
             "vehicle":"bus",
-            "website": "https://company_2_website/",
+            "website": "https://starmobility.it/star/pdf.php?line=S001",
             "fares": [
                 {
                     "start":"Villanterio",
                     "destination":"Pavia",
-                    "price":"9.99"
+                    "price":"2.80"
                     
                 },
                 {
                     "start":"Villanterio",
                     "destination":"Lodi",
-                    "price":"9.99"
+                    "price":"2.80"
                     
                 }
             ],

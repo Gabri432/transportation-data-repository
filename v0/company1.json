@@ -1,15 +1,15 @@
 {
     "lines":[
         {
-            "line_code":"Bus line code n1 of company 1",
+            "line_code":"Autoguidovie Line 97",
             "cities":["Villanterio", "City in the middle", "Milan"],
             "vehicle":"tram",
-            "website": "https://company_1_website_/",
+            "website": "https://pavia.autoguidovie.it/it/orario-invernale-scolastico-extraurbano-24-25",
             "fares": [
                 {
                     "start":"Villanterio",
                     "destination":"Milan",
-                    "price":"9.99"
+                    "price":"4.80"
                     
                 }
             ],
