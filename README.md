@@ -1,12 +1,12 @@
-# Public Transportation Data Repository for Villanterio
+# Public Transportation Repository for Villanterio
 
-This repository contains structured and versioned data about public transportation in Villanterio. The goal is to provide utility information for citizens of the town and application development. 
+This repository contains structured and versioned data about public transportation in a city. The idea is to create a convinient template for applications with real transportation data.
 
-## Intended use
+## Expected Features
 
-1. The idea behind this project is to allow to search at what times there were buses to and from Villanterio.
+1. Allowing a user to search for incoming and outgoing buses for a city.
 
-2. There are (currently) two bus lines, one that goes to Milan and back, the other that goes from Lodi to Pavia, and back.
+2. For example porpuses, I have used 2 bus lines and four (real name) cities.
 
 3. You can search at what times there is a bus from Pavia, from Lodi, or from Milan, that takes to Villanterio. Conversely, you can also seach at what times a bus from Villanterio goes to Pavia, Lodi or Milan.
 
@@ -28,8 +28,8 @@ root
 -- .gitignore          # Specifies files and folders to exclude from version control
 
 -- v0/                 # Unstable data, subject to breaking changes
----- autoguidovie.json # Transportation data for Company 1
----- star.json         # Transportation data for Company 2
+---- company1.json     # Transportation data for Company 1
+---- company2.json     # Transportation data for Company 2
 ---- scripts/
 ------ Filter.py       # Utility class for filtering data
 ------ Getters.py      # Utility class for getting data
@@ -59,14 +59,14 @@ root
 {
    "lines":[ // Set of lines (currently one per company)
         {
-            "line_code":"97", // The name code of the line
+            "line_code":"Bus Line Name or Code 0123", // The name or code of the line
             "cities":["Villanterio", "..."], // The list of cities crossed by this line
-            "website": "https://pavia.autoguidovie.it/it/orario-invernale-scolastico-extraurbano-24-25", // Link to the website
+            "website": "https://link_to_the_company_website", // Link to the website
             "fares": [ // List of fares
                 {
                     "start":"Villanterio", // Starting city related to the fare 
                     "destination":"Milan", // Destination city related to the fare
-                    "price":"4.80" // Cost of the travel between start and destination (in Euros)
+                    "price":"9.99" // Cost of the travel between start and destination (in Euros)
                     
                 }
             ],
@@ -135,7 +135,7 @@ root
 4. **Just get the data**
    If you just need the data you can access the rawgithubusercontent:
    ```
-   https://raw.githubusercontent.com/Gabri432/transportation-data-villanterio/refs/heads/main/v0/autoguidovie.json
+   https://raw.githubusercontent.com/Gabri432/transportation-data-villanterio/refs/heads/main/v0/company1.json
    ```
 
 ## Contributing
@@ -148,8 +148,6 @@ This repository is licensed under the MIT. See `LICENSE` for more details.
 
 ## Notes
 
-1. When considering line 97, I have only considered buses from Villanterio to Milan, and back. Therefore I have ignored those buses that goes to Inverno or Pieve Porto Morone. If you need more information check [Autoguidovie's website](https://pavia.autoguidovie.it/it/orario-invernale-scolastico-extraurbano-24-25).
+1. This project is intended for learning porpuses, and utility, not for profit.
 
-2. This project is intended for learning porpuses, and utility, not for profit.
-
-3. Python version used: Python 3.12.4
+2. Python version used: Python 3.12.4

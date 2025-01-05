@@ -10,8 +10,8 @@ class Run:
     """
     Class printing a series of available bus times after the current time, or after 15:30 if current time isn't available.
     """
-    company_1_bus_lines: list[BusLine] = Getters.get_autoguidovie_lines_data()
-    company_2_bus_lines: list[BusLine] = Getters.get_starmobility_lines_data()
+    company_1_bus_lines: list[BusLine] = Getters.get_company_1_lines_data()
+    company_2_bus_lines: list[BusLine] = Getters.get_company_2_lines_data()
     current_time: str = "15:30"
     current_period: str = "weekdays"
 

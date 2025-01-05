@@ -1,22 +1,11 @@
 import json
 
-from BusLine import BusLine
+from Getters import Getters
 
-def print_autoguidovie_data():
-    with open('v0/autoguidovie.json', 'r') as autog:
-        autoguidovie_data = json.load(autog)
-        autoguidovie_busLines = [BusLine(**busLine) for busLine in autoguidovie_data["lines"]]
-        print(autoguidovie_busLines[0])
-
-def print_starmobility_data():
-    with open('v0/starmobility.json', 'r') as star:
-        starmobility_data = json.load(star)
-        starmobility_busLines = [BusLine(**busLine) for busLine in starmobility_data["lines"]]
-        print(starmobility_busLines[0])
-
-print("AUTOGUIDOVIE ================= =================")
-print_autoguidovie_data()
+print("COMPANY 1 ================= =================")
+print(Getters.get_company_1_lines_data())
 print("END =================")
-print("STARMOBILITY ================= =================")
-print_starmobility_data()
+print("COMPANY 2 ================= =================")
+print(Getters.get_company_2_lines_data())
 print("END =================")
+

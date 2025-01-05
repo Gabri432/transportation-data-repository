@@ -1,20 +1,20 @@
 {
     "lines":[
         {
-            "line_code":"s001",
-            "cities":["Pavia", "Vigalfo", "Copiano", "Villanterio", "Sant'Angelo Lodigiano", "Borgo S. Giovanni", "Pieve Fissiraga","Lodi"],
-            "website": "https://starmobility.it/star/pdf.php?line=S001",
+            "line_code":"Bus line code n1 of company 2",
+            "cities":["Pavia", "City in the middle", "Lodi"],
+            "website": "https://company_2_website/",
             "fares": [
                 {
                     "start":"Villanterio",
                     "destination":"Pavia",
-                    "price":"2.80"
+                    "price":"9.99"
                     
                 },
                 {
                     "start":"Villanterio",
                     "destination":"Lodi",
-                    "price":"2.80"
+                    "price":"9.99"
                     
                 }
             ],

@@ -4,21 +4,21 @@ from BusLine import BusLine
 
 class Getters:
     @staticmethod
-    def get_autoguidovie_lines_data() -> list[BusLine]:
+    def get_json_data(path_to_json: str) -> list[BusLine]:
+        with open(path_to_json, 'r') as autog:
+            data = json.load(autog)
+            return [BusLine(**bus_line) for bus_line in data["lines"]]
+
+    @staticmethod
+    def get_company_1_lines_data() -> list[BusLine]:
         """
-        Returns a list of bus lines, related to Autoguidovie company, that serve Villanterio (currently just one).
+        Returns a list of bus lines, related to company 1, that serve Villanterio (currently just one).
         """
-        with open('v0/autoguidovie.json', 'r') as autog:
-            autoguidovie_data = json.load(autog)
-            autoguidovie_bus_lines = [BusLine(**bus_line) for bus_line in autoguidovie_data["lines"]]
-            return autoguidovie_bus_lines
+        return Getters.get_json_data('v0/company1.json')
     
     @staticmethod    
-    def get_starmobility_lines_data() -> list[BusLine]:
+    def get_company_2_lines_data() -> list[BusLine]:
         """
-        Returns a list of bus lines, related to Star Mobility company, that serve Villanterio (currently just one).
+        Returns a list of bus lines, related to company 2, that serve Villanterio (currently just one).
         """
-        with open('v0/starmobility.json', 'r') as star:
-            starmobility_data = json.load(star)
-            starmobility_bus_lines = [BusLine(**bus_line) for bus_line in starmobility_data["lines"]]
-            return starmobility_bus_lines
+        return Getters.get_json_data('v0/company2.json')

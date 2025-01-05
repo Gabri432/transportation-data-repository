@@ -5,12 +5,12 @@ class Filter:
     """
     Provide a series of filters to apply to each bus line
     """
-    autoguidovie_bus_lines: list[BusLine] = Getters.get_autoguidovie_lines_data()
-    starmobility_bus_lines: list[BusLine] = Getters.get_starmobility_lines_data()
+    company_1_bus_lines: list[BusLine] = Getters.get_company_1_lines_data()
+    company_2_bus_lines: list[BusLine] = Getters.get_company_2_lines_data()
 
 
     @staticmethod
-    def filter_bus_line_by_period(bus_line=autoguidovie_bus_lines[0], period="weekdays") -> list[Route]:
+    def filter_bus_line_by_period(bus_line=company_1_bus_lines[0], period="weekdays") -> list[Route]:
         """
         Returns a list of (regular) bus times during the specified period.
 
@@ -21,7 +21,7 @@ class Filter:
         ----------
 
         ### `bus_line`: BusLine 
-            either starmobility_bus_lines[0] or autoguidovie_bus_lines[0] (default) (NOTE: there is currenlty one line per company)
+            either company_2_bus_lines[0] or company_1_bus_lines[0] (default) (NOTE: there is currenlty one line per company)
         ### `period`: str
             either "holidays", "saturdays" or "weekdays" (default)
         """
@@ -30,7 +30,7 @@ class Filter:
         return specific_period_regular_schedules[0]["routes"]
     
     @staticmethod
-    def filter_route_times_by_time_after(bus_route=autoguidovie_bus_lines[0].time_table_types[0]["schedules"][0]["routes"][0], time="15:30") -> list[str]:
+    def filter_route_times_by_time_after(bus_route=company_1_bus_lines[0].time_table_types[0]["schedules"][0]["routes"][0], time="15:30") -> list[str]:
         """
         Returns a list of the existing (regular) bus times later than the one specified by the user. Each bus time represents the time 
         where the bus starts the route. That is, if the starting city is, let's say, Pavia, then all the bus times the function will return 
@@ -49,9 +49,9 @@ class Filter:
         return [bus_time for bus_time in bus_route["times"] if bus_time > time]
     
     @staticmethod
-    def filter_bus_line_by_time_after(bus_line=autoguidovie_bus_lines[0], time="15:30", period="weekdays") -> list[Route]:
+    def filter_bus_line_by_time_after(bus_line=company_1_bus_lines[0], time="15:30", period="weekdays") -> list[Route]:
         """
-        Returns a list of (regular) bus times of the specified bus line (Autoguidovie or Starmobility) available later than the specified time, 
+        Returns a list of (regular) bus times of the specified bus line (company 1 or company 2) available later than the specified time, 
         at the specified period, between all routes (from and to Villanterio).
 
         More specifically, returns a list of Route objects, each having a list of times in format dd:dd later than, the names of 
@@ -61,7 +61,7 @@ class Filter:
         ----------
 
         ### `bus_line`: BusLine 
-            either autoguidovie_bus_lines[0] (default) or starmobility_bus_lines[0] (NOTE: there is currenlty one line per company)
+            either company_1_bus_lines[0] (default) or company_2_bus_lines[0] (NOTE: there is currenlty one line per company)
         ### `time`: str
             any string in format dd:dd, ideally between 05:00 and 21:00 (15:30 is default)
         """
@@ -73,7 +73,7 @@ class Filter:
         return filtered_routes
     
     @staticmethod
-    def filter_bus_line_by_city(bus_line=starmobility_bus_lines[0], city="Pavia") -> list[Route]:
+    def filter_bus_line_by_city(bus_line=company_2_bus_lines[0], city="Pavia") -> list[Route]:
         """
         Returns a list of (regular) routes, where each route has the specified city as either starting or destination city.
 
@@ -84,7 +84,7 @@ class Filter:
         ----------
 
         ### `bus_line`: BusLine 
-            either autoguidovie_bus_lines[0] or starmobility_bus_lines[0] (default) (NOTE: there is currenlty one line per company)
+            either company_1_bus_lines[0] or company_2_bus_lines[0] (default) (NOTE: there is currenlty one line per company)
         ### `city`: str
             either "Milan", "Lodi", or "Pavia" (default)
         """
