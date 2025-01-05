@@ -122,13 +122,14 @@ root
    Navigate to the desired version folder (e.g., `v1/`) to access stable data.
 
 3. **Load and Use JSON Files**
-   Use your preferred programming language or tools to parse the JSON data. For example, in Python:
-   ```python
-   import json
+   To view data in a human readable format:
+   ```
+   python v0/scripts/print_json.py
+   ```
 
-   with open('v1/company1.json', 'r') as file:
-       data = json.load(file)
-       print(data)
+   To ask for help about how to use the code:
+   ```
+   python v0/scripts/help.py
    ```
 
 ## Contributing
