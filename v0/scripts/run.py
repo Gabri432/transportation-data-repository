@@ -23,6 +23,8 @@ class Run:
         hours = today.hour
         minutes = today.minute
         self.current_time = f"{hours}:{minutes}"
+        if hours < 10:
+            self.current_time = f"0{hours}:{minutes}"
 
     def __set_current_period_of_the_week(self):
         """
