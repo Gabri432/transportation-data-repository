@@ -1,4 +1,4 @@
-# Public Transportation Repository for Villanterio
+# Public Transportation Data Repository for Villanterio
 
 This repository contains structured and versioned data about public transportation in the town of Villanterio. The idea is to create a convenient structure/template for possible/futre applications with real transportation data.
 
