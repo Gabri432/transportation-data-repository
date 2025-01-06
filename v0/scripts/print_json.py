@@ -1,5 +1,3 @@
-import json
-
 from Getters import Getters
 from TransportLine import TransportLine
 
