@@ -27,8 +27,8 @@ root
 -- .gitignore          # Specifies files and folders to exclude from version control
 
 -- v0/                 # Unstable data, subject to breaking changes
----- company1.json     # Transportation data for Company 1
----- company2.json     # Transportation data for Company 2
+---- company_1.json     # Transportation data for Company 1
+---- company_2.json     # Transportation data for Company 2
 ---- scripts/
 ------ Filter.py       # Utility class for filtering data
 ------ Getters.py      # Utility class for getting data
@@ -39,15 +39,15 @@ root
 
 
 -- v1/                 # First stable version of the data (not currently existing, just to give you an idea)
----- company1.json
----- company2.json
+---- company_1.json
+---- company_2.json
 ---- scripts/
 ------ Filter.py       # Each version will have its own set of scripts to ensure backward compatibility
 ------ [...]
 
 -- v2/                 # Second stable version of the data (not currently existing, just to give you the idea)
----- company1.json
----- company2.json
+---- company_1.json
+---- company_2.json
 ---- scripts/
 ------ Filter.py
 ------ [...]
@@ -59,13 +59,13 @@ root
    "lines":[ // Set of lines (currently one per company)
         {
             "line_code":"Bus Line Name or Code 0123", // The name or code of the line
-            "cities":["Villanterio", "..."], // The list of cities crossed by this line
+            "cities":["City_1", "..."], // The list of cities crossed by this line
             "vehicle":"bus", // Vehicle used for the line
             "website": "https://link_to_the_company_website", // Link to the website
             "fares": [ // List of fares
                 {
-                    "start":"Villanterio", // Starting city related to the fare 
-                    "destination":"Milan", // Destination city related to the fare
+                    "start":"City_1", // Starting city related to the fare 
+                    "destination":"City_2", // Destination city related to the fare
                     "price":"9.99" // Cost of the travel between start and destination (in Euros)
                     
                 }
@@ -87,13 +87,13 @@ root
                             "period":"weekdays", // Period ("weekdays", "saturdays" or "holidays")
                             "routes":[
                                 {
-                                    "start":"Villanterio", // Starting city of the specific route
-                                    "destination":"Milan", // Destination city of the specific route
-                                    "times":["05:43", "..."] // List of bus times when they start from the starting city
+                                    "start":"City_1", // Starting city of the specific route
+                                    "destination":"City_2", // Destination city of the specific route
+                                    "times":["05:40", "..."] // List of bus times when they start from the starting city
                                 },
                                 {
-                                    "start":"Milan", // Starting city of the specific route
-                                    "destination":"Villanterio", // Destination city of the specific route
+                                    "start":"City_1", // Starting city of the specific route
+                                    "destination":"City_2", // Destination city of the specific route
                                     "times":["07:50", "..."] // List of bus times when they start from the starting city
                                 }
                             ]
@@ -135,7 +135,7 @@ root
 4. **Just get the data**
    If you just need the data you can access the rawgithubusercontent:
    ```
-   https://raw.githubusercontent.com/Gabri432/transportation-data-villanterio/refs/heads/main/v0/company1.json
+   https://raw.githubusercontent.com/Gabri432/transportation-data-villanterio/refs/heads/main/v0/company_1.json
    ```
 
 ## Contributing
@@ -152,11 +152,7 @@ This repository is licensed under the Apache License, Version 2.0. See `LICENSE`
 
 2. Python version used: 3.12.4
 
-3. The schedule data is sourced from publicly available PDFs provided by transportation companies. The data used in this project has been manually transcribed into JSON format. Below are the sources of the schedules:
-
-Autoguidovie: https://pavia.autoguidovie.it/
-
-Star Mobility: https://starmobility.it/
+3. The schedule data is purely fictional, for illustrative porpuses.
 
 ### Disclaimers
 
