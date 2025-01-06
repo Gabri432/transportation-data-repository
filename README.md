@@ -20,7 +20,6 @@ Each folder contains its own set of json data and scripts.
 
 ```python
 root
--- start.py            # Script to explain more in detail the project
 -- LICENSE             # Repository licensing information (Apache License Version 2.0)
 -- README.md           # Overview and instructions for using the repository
 -- CONTRIBUTING.md     # Guidelines for contributing to the project
