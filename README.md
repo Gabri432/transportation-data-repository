@@ -126,7 +126,7 @@ root
    python v0/scripts/print_json.py
    ```
 
-   To run the program and getting the next bus times:
+   To run the program and getting the next bus (or tram, train, ...) times:
    ```
    python v0/scripts/run.py
    ```

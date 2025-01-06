@@ -6,10 +6,10 @@ class Route(object):
 
     def __str__(self):
         strings = ", ".join(self.times)
-        return f"\n--Route: {self.start} --> {self.destination}\n--Bus times departing from {self.start}: \t{strings}\n\n"
+        return f"\n--Route: {self.start} --> {self.destination}\n--Transportation times departing from {self.start}: \t{strings}\n\n"
 
     def __repr__(self):
-        return f"Route start: {self.start}\nRoute destination: {self.destination}\nRoute bus times: {self.times}\n\n"
+        return f"Route start: {self.start}\nRoute destination: {self.destination}\nRoute transportation times: {self.times}\n\n"
 
 
 class Schedule(object):
@@ -45,7 +45,7 @@ class Fare:
         self.price = price
 
     def __str__(self):
-        return f"--Bus line: {self.start} <--> {self.destination}\nPrice: {self.price}\n"
+        return f"--Transportation line: {self.start} <--> {self.destination}\nPrice: {self.price}\n"
 
     def __repr__(self):
         return f"Start: {self.start}\nDestination: {self.destination}\nPrice: {self.price}\n"
@@ -65,8 +65,8 @@ class TransportLine:
         string_fares = "".join(str(Fare(obj["start"], obj["destination"], obj["price"])) for obj in self.fares)
         string_cities = ", ".join(self.cities)
         return (
-            f"Bus Line Code: {self.line_code}\n\nCities on the route: {string_cities}\n\nVehicle used: {self.vehicle}\n\n"
-            f"Company Website: {self.website}\n\nBus Line Fares: \n{string_fares}\n\nBus timetable:\n{strings}\n")
+            f"Transportation Line Code: {self.line_code}\n\nCities on the route: {string_cities}\n\nVehicle used: {self.vehicle}\n\n"
+            f"Company Website: {self.website}\n\nTransportation Line Fares: \n{string_fares}\n\nTransportation Line timetable:\n{strings}\n")
 
     def __repr__(self):
         return (
