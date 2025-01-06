@@ -30,23 +30,23 @@ class Filter:
         return specific_period_regular_schedules[0]["routes"]
     
     @staticmethod
-    def filter_route_times_by_time_after(bus_route=company_1_transportation_lines[0].time_table_types[0]["schedules"][0]["routes"][0], time="15:30") -> list[str]:
+    def filter_route_times_by_time_after(transportation_route=company_1_transportation_lines[0].time_table_types[0]["schedules"][0]["routes"][0], time="15:30") -> list[str]:
         """
-        Returns a list of the existing (regular) transport times later than the one specified by the user. Each bus time represents the time 
-        where the transport vehicle starts the route. That is, if the starting city is, let's say, City_1, then all the bus times the function will return 
+        Returns a list of the existing (regular) transport times later than the one specified by the user. Each transportation time represents the time 
+        where the transport vehicle starts the route. That is, if the starting city is, let's say, City_1, then all the transportation times the function will return 
         are the starting times from City_1.
 
-        More specifically, it returns a list of strings in format dd:dd (d, decimal), each representing a time when a bus is present.
+        More specifically, it returns a list of strings in format dd:dd (d, decimal), each representing a time when a transportation is present.
 
         Parameters
         ----------
 
-        ### `bus_route`: Route
+        ### `transportation_route`: Route
             object of type Route having a list of times, `start` as the starting city and `destination` as the destination city.
         ### `time`: str
             any string in format dd:dd, ideally between 05:00 and 21:00 (15:30 is default).
         """
-        return [bus_time for bus_time in bus_route["times"] if bus_time > time]
+        return [transportation_time for transportation_time in transportation_route["times"] if transportation_time > time]
     
     @staticmethod
     def filter_transportation_line_by_time_after(transportation_line=company_1_transportation_lines[0], time="15:30", period="weekdays") -> list[Route]:
@@ -83,8 +83,8 @@ class Filter:
         Parameters
         ----------
 
-        ### `bus_line`: BusLine 
-            either company_1_bus_lines[0] or company_2_bus_lines[0] (default) (NOTE: there is currenlty one line per company)
+        ### `transportation_line`: TransportLine 
+            either company_1_transportation_lines[0] or company_2_transportation_lines[0] (default) (NOTE: there is currenlty one line per company)
         ### `city`: str
             either "City_3", "City_2", or "City_1" (default)
         """
