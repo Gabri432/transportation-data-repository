@@ -7,10 +7,10 @@ class PeriodEnum(Enum):
 
 
 class CityEnum(Enum):
-    MILAN = "Milan"
-    VILLANTERIO = "Villanterio"
-    LODI = "Lodi"
-    PAVIA = "Pavia"
+    CITY_1 = "City_1"
+    CITY_2 = "City_2"
+    CITY_3 = "City_3"
+    CITY_4 = "City_4"
 
 class VehicleEnum(Enum):
     BUS = "bus"

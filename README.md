@@ -1,12 +1,12 @@
-# Public Transportation Data Repository for Villanterio
+# Public Transportation Data Repository Structure
 
-This repository contains structured and versioned data about public transportation in the town of Villanterio. The idea is to create a convenient structure/template for possible/futre applications with real transportation data.
+This repository was made with idea is to create a convenient structure/template for possible/futre applications with real transportation data.
 
 ## Expected Features
 
-1. Allows a user to search for incoming and outgoing buses for a city. In this specific case, I have used 2 transportation lines and four (real name) cities.
+1. Allows a user to search for incoming and outgoing buses (or any transportation vehicle) for a city. 
 
-2. You can search at what times there is a bus from Pavia, from Lodi, or from Milan, that takes to Villanterio. Conversely, you can also seach at what times a bus from Villanterio goes to Pavia, Lodi or Milan.
+2. You can search at what times there is a bus from City_1 to City_2 or to City_3 and viceversa.
 
 3. There are also extra details about the cities crossed, the line name, the website of the companies. 
 
@@ -153,12 +153,4 @@ This repository is licensed under the Apache License, Version 2.0. See `LICENSE`
 2. Python version used: 3.12.4
 
 3. The schedule data is purely fictional, for illustrative porpuses.
-
-### Disclaimers
-
-1. Independence Disclaimer: This project is an independent initiative and is not affiliated with, sponsored by, or endorsed by any transportation company mentioned herein.
-
-2. Accuracy Disclaimer: The data provided in this project is for informational purposes only. Users are encouraged to verify the schedules directly with the official sources as linked in this document and the tool itself. This project is not liable for any discrepancies or inaccuracies in the data.
-
-3. Non-commercial Disclaimer: This project is strictly non-commercial and intended solely for public utility and personal learning purposes. No tickets are sold, and no revenue is generated from this project.
 

@@ -33,8 +33,8 @@ class Filter:
     def filter_route_times_by_time_after(bus_route=company_1_bus_lines[0].time_table_types[0]["schedules"][0]["routes"][0], time="15:30") -> list[str]:
         """
         Returns a list of the existing (regular) bus times later than the one specified by the user. Each bus time represents the time 
-        where the bus starts the route. That is, if the starting city is, let's say, Pavia, then all the bus times the function will return 
-        are the starting times from Pavia.
+        where the bus starts the route. That is, if the starting city is, let's say, City_1, then all the bus times the function will return 
+        are the starting times from City_1.
 
         More specifically, it returns a list of strings in format dd:dd (d, decimal), each representing a time when a bus is present.
 
@@ -52,7 +52,7 @@ class Filter:
     def filter_bus_line_by_time_after(bus_line=company_1_bus_lines[0], time="15:30", period="weekdays") -> list[Route]:
         """
         Returns a list of (regular) bus times of the specified bus line (company 1 or company 2) available later than the specified time, 
-        at the specified period, between all routes (from and to Villanterio).
+        at the specified period, between all routes.
 
         More specifically, returns a list of Route objects, each having a list of times in format dd:dd later than, the names of 
         the starting and destination cities per each route.
@@ -73,7 +73,7 @@ class Filter:
         return filtered_routes
     
     @staticmethod
-    def filter_bus_line_by_city(bus_line=company_2_bus_lines[0], city="Pavia") -> list[Route]:
+    def filter_bus_line_by_city(bus_line=company_2_bus_lines[0], city="City_1") -> list[Route]:
         """
         Returns a list of (regular) routes, where each route has the specified city as either starting or destination city.
 
@@ -86,7 +86,7 @@ class Filter:
         ### `bus_line`: BusLine 
             either company_1_bus_lines[0] or company_2_bus_lines[0] (default) (NOTE: there is currenlty one line per company)
         ### `city`: str
-            either "Milan", "Lodi", or "Pavia" (default)
+            either "City_3", "City_2", or "City_1" (default)
         """
         regular_schedules: list[Schedule] = [time_table for time_table in bus_line.time_table_types if time_table["type"] == "regular"][0]["schedules"]
         return [route for route in regular_schedules[0]["routes"] if route["start"] == city or route["destination"] == city]
