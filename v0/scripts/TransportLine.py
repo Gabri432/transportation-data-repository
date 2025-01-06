@@ -51,7 +51,7 @@ class Fare:
         return f"Start: {self.start}\nDestination: {self.destination}\nPrice: {self.price}\n"
 
 
-class BusLine:
+class TransportLine:
     def __init__(self, line_code: str, cities: list[str], vehicle: str, website: str, fares: list[Fare], time_table_types: list[TimeTable]):
         self.line_code = line_code
         self.cities = cities

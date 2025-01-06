@@ -33,7 +33,7 @@ root
 ------ Filter.py       # Utility class for filtering data
 ------ Getters.py      # Utility class for getting data
 ------ enums.py        # List of various Enums
------- BusLine.py      # List of various classes used to represent data
+------ TransportLine.py# List of various classes used to represent data
 ------ print_json.py   # Utility functions for printing data
 ------ run.py          # Simple program to show an example of usage
 
