@@ -3,7 +3,7 @@
 Whenever you encounter an issue or a bug, consider reporting it in the repo:
 
 ```
-https://github.com/Gabri432/transportation-data-villanterio/issues/new
+https://github.com/Gabri432/transportation-data-repository/issues/new
 ```
 
 ## Translation

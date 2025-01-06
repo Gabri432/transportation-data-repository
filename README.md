@@ -115,7 +115,7 @@ root
 1. **Download the Repository**
    Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/Gabri432/transportation-data-villanterio.git
+   git clone https://github.com/Gabri432/transportation-data-repository.git
    ```
 
 2. **Select a Data Version**
@@ -135,7 +135,7 @@ root
 4. **Just get the data**
    If you just need the data you can access the rawgithubusercontent:
    ```
-   https://raw.githubusercontent.com/Gabri432/transportation-data-villanterio/refs/heads/main/v0/company_1.json
+   https://raw.githubusercontent.com/Gabri432/transportation-data-repository/refs/heads/main/v0/company_1.json
    ```
 
 ## Contributing
