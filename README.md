@@ -154,9 +154,9 @@ This repository is licensed under the Apache License, Version 2.0. See `LICENSE`
 
 3. The schedule data is sourced from publicly available PDFs provided by transportation companies. The data used in this project has been manually transcribed into JSON format. Below are the sources of the schedules:
 
-Autoguidovie: https://pavia.autoguidovie.it/it/orario-invernale-scolastico-extraurbano-24-25
+Autoguidovie: https://pavia.autoguidovie.it/
 
-Star Mobility: https://starmobility.it/star/pdf.php?line=S001
+Star Mobility: https://starmobility.it/
 
 ### Disclaimers
 
